@@ -1,0 +1,152 @@
+/* ==========================================================
+                    THEME.CSS
+        Portfolio Theme System - Version 1.0
+========================================================== */
+
+/* ===============================
+            DARK THEME
+===============================*/
+
+:root{
+
+    /* Background */
+    --bg-color:#03000A;
+    --bg-secondary:#07070B;
+    --bg-tertiary:#090614;
+    --surface:#111118;
+    --card-bg:rgba(14,8,25,.40);
+    --input-bg:#15151F;
+
+    /* Text */
+    --text-primary:#FFFFFF;
+    --text-secondary:#94A3B8;
+    --text-muted:#A3A3B2;
+
+    /* Brand */
+    --primary:#A855F7;
+    --primary-hover:#8B5CF6;
+    --primary-light:#C084FC;
+
+    /* Accent */
+    --accent-purple:#8B5CF6;
+    --accent-magenta:#A855F7;
+    --accent-cyan:#00D2FF;
+
+    /* Borders */
+    --border-color:rgba(255,255,255,.06);
+    --border-purple:rgba(168,85,247,.18);
+
+    /* Shadows */
+    --shadow-purple:rgba(168,85,247,.25);
+    --shadow-large:0 0 40px rgba(168,85,247,.25);
+
+    /* Gradient */
+    --gradient-primary:
+        linear-gradient(
+            135deg,
+            #A855F7 0%,
+            #6366F1 100%
+        );
+
+    --gradient-title:
+        linear-gradient(
+            90deg,
+            #8A3BF2,
+            #00D2FF
+        );
+
+    /* Radius */
+    --radius-sm:10px;
+    --radius-md:16px;
+    --radius-lg:24px;
+
+    /* Transition */
+    --transition:.35s ease;
+
+}
+
+
+/* ===============================
+            LIGHT THEME
+===============================*/
+
+body.light-mode{
+
+    /* Background */
+    --bg-color:#F5F7FB;
+    --bg-secondary:#FFFFFF;
+    --bg-tertiary:#EEF2F7;
+    --surface:#FFFFFF;
+    --card-bg:#FFFFFF;
+    --input-bg:#F8FAFC;
+
+    /* Text */
+    --text-primary:#1F2937;
+    --text-secondary:#64748B;
+    --text-muted:#94A3B8;
+
+    /* Brand */
+    --primary:#8B5CF6;
+    --primary-hover:#7C3AED;
+    --primary-light:#A78BFA;
+
+    /* Accent */
+    --accent-purple:#8B5CF6;
+    --accent-magenta:#9333EA;
+    --accent-cyan:#06B6D4;
+
+    /* Borders */
+    --border-color:#E5E7EB;
+    --border-purple:rgba(139,92,246,.18);
+
+    /* Shadows */
+    --shadow-purple:rgba(139,92,246,.12);
+    --shadow-large:0 8px 35px rgba(0,0,0,.08);
+
+    /* Gradient */
+    --gradient-primary:
+        linear-gradient(
+            135deg,
+            #8B5CF6 0%,
+            #6366F1 100%
+        );
+
+    --gradient-title:
+        linear-gradient(
+            90deg,
+            #7C3AED,
+            #0EA5E9
+        );
+
+}
+
+
+/* ==========================================
+        GLOBAL SMOOTH TRANSITIONS
+========================================== */
+
+body,
+section,
+header,
+footer,
+nav,
+button,
+a,
+input,
+textarea,
+.card,
+.project-card,
+.feature-card,
+.about-card{
+
+    transition:
+
+        background-color .35s ease,
+
+        color .35s ease,
+
+        border-color .35s ease,
+
+        box-shadow .35s ease;
+
+}

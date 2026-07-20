@@ -1,0 +1,184 @@
+@keyframes navDrop {
+    0%{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.navbar{
+    opacity:0;
+    animation:navDrop .8s ease forwards;
+}
+
+@keyframes logoFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.logo{
+
+    opacity:0;
+
+    animation:logoFade .7s ease forwards;
+
+    animation-delay:.3s;
+
+}
+
+@keyframes navLink{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.nav-links li{
+
+    opacity:0;
+
+    animation:navLink .5s ease forwards;
+
+}
+
+.nav-links li:nth-child(1){
+    animation-delay:.5s;
+}
+
+.nav-links li:nth-child(2){
+    animation-delay:.6s;
+}
+
+.nav-links li:nth-child(3){
+    animation-delay:.7s;
+}
+
+.nav-links li:nth-child(4){
+    animation-delay:.8s;
+}
+
+.nav-links li:nth-child(5){
+    animation-delay:.9s;
+}
+
+@keyframes moonRotate{
+
+    from{
+
+        opacity:0;
+
+        transform:rotate(-180deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:rotate(0);
+
+    }
+
+}
+
+.theme-btn{
+
+    opacity:0;
+
+    animation:moonRotate .8s ease forwards;
+
+    animation-delay:1s;
+
+}
+
+@keyframes buttonPop{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.resume-btn{
+
+    opacity:0;
+
+    animation:buttonPop .6s ease forwards;
+
+    animation-delay:1.15s;
+
+}
+
+@keyframes borderGlow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(168,85,247,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 25px rgba(168,85,247,.25);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 10px rgba(168,85,247,.08);
+
+    }
+
+}
+
+.navbar{
+
+    animation:
+        navDrop .8s ease forwards,
+        borderGlow 1.8s ease forwards;
+
+}

@@ -1,0 +1,2094 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+:root {
+    --bg-color: #03000a;
+    --card-bg: rgba(14, 8, 25, 0.4);
+    --border-color: rgba(255, 255, 255, 0.06);
+    --text-primary: #ffffff;
+    --text-secondary: #94a3b8;
+    --accent-purple: #8b5cf6;
+    --accent-magenta: #a855f7;
+    --gradient-primary: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* --- Header & Navigation --- */
+.header{
+    z-index: 9999;
+}
+.navbar{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+height:70px;
+width: 97%;
+margin: auto;
+
+padding:0 35px;
+
+
+background: rgba(10,10,15,1);
+
+
+border: 2px solid rgba(168,85,247,0.15);
+
+backdrop-filter:blur(20px);
+
+border-radius:14px;
+
+margin-bottom: 25px;
+margin-top: 30px;
+margin-left: 20px;
+margin-right: 20px;
+position: fixed;
+z-index: 9999;
+}
+
+
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:2px;
+
+}
+
+.logo img{
+
+width:55px;
+
+}
+
+.logo h2{
+font-family: 'poppins', sans-serif;
+font-size:17px;
+
+font-weight:600;
+
+letter-spacing:.4px;
+color: WHITE;
+
+}
+
+.logo span{
+
+color: white;
+
+}
+
+.nav-links{
+
+display:flex;
+
+gap:50px;
+
+}
+
+.nav-links li{
+    list-style-type: none;
+    font-family: 'poppins', sans-serif;
+}
+.nav-links a{
+
+color:white;
+
+font-size:14px;
+
+font-weight:500;
+
+position:relative;
+
+transition:.4s;
+
+}
+
+.nav-links a.active{
+
+    color: #A855F7;
+}
+
+.nav-links a.active::after{
+
+    width: 100%;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav-links a:hover{
+
+color:#A855F7;
+
+}
+
+
+.nav-links a.active::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+transform:translateX(-50%);
+
+bottom:-24px;
+
+width:38px;
+
+height:2px;
+
+background:#A855F7;
+
+border-radius:50px;
+
+box-shadow:0 0 10px rgba(168,85,247,.08);
+
+}
+
+.nav-right{
+
+display:flex;
+
+align-items:center;
+
+gap:22px;
+
+}
+
+.nav-toggle{
+    display: none;
+}
+
+
+.theme-btn{
+
+width:48px;
+
+height:48px;
+
+border-radius:50%;
+
+background:transparent;
+
+border:none;
+
+color:white;
+
+font-size:20px;
+
+cursor:pointer;
+
+transition:.4s;
+margin-right: 25px;
+
+}
+
+.theme-btn:hover{
+
+color:#A855F7;
+
+transform:rotate(25deg);
+
+}
+
+.resume-btn{
+
+font-family: 'poppins', sans-serif;
+
+padding:10px 20px;
+
+border:1px solid rgba(168,85,247,.2);
+
+border-radius:12px;
+
+display:flex;
+
+align-items:center;
+
+gap:10px;
+
+transition:.4s;
+font-size: 13px;
+color: rgba(168,85,247,.5);
+
+}
+
+.resume-btn:hover{
+
+background:#A855F7;
+
+box-shadow:0 0 35px rgba(168,85,247,.5);
+
+}
+
+
+body {
+            background-color: #060409;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            overflow-x: hidden;
+            color: #ffffff;
+        }
+
+        /* Hero Setup with Background Grid Lineaments */
+        .hero-section {
+            margin-top: 70px;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            padding: 80px 6%;
+            background: radial-gradient(circle at 85% 40%, rgba(147, 51, 234, 0.15) 0%, transparent 50%);
+            padding-top: 250px !important;
+        }
+
+        /* Perspective grid background lines matching the image */
+        .grid-floor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60%;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 80px 80px;
+            transform: perspective(500px) rotateX(70deg);
+            transform-origin: bottom;
+            mask-image: linear-gradient(to top, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
+            -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,1) 20%, rgba(0,0,0,0) 100%);
+            pointer-events: none;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1200px;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            align-items: center;
+            gap: 50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- Left Sidebar Content --- */
+        .content-left {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .work-badge {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 6px 16px;
+            border-radius: 100px;
+            color: #d1d5db;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.3px;
+            margin-bottom: 28px;
+        }
+
+        .hero-title {
+            font-size: 5.2rem;
+            font-weight: 800;
+            line-height: 1.05;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .hero-title span {
+            display: block;
+            color: #8b5cf6;
+        }
+
+        .hero-desc {
+            color: #94a3b8;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            line-height: 1.6;
+            max-width: 450px;
+            margin-bottom: 40px;
+        }
+
+        .action-capsule-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(90deg, #4f46e5 0%, #7c3aed 100%);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 15px 36px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            box-shadow: 0 4px 20px rgba(124, 58, 237, 0.3);
+            transition: opacity 0.2s ease;
+        }
+
+        .action-capsule-btn:hover {
+            opacity: 0.9;
+        }
+
+        /* --- Premium Scroll Indicator with Current Flow --- */
+
+.scroll-explore {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Space between line and text */
+    color: #4b5563; /* Dim text color as in your design */
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    user-select: none;
+}
+
+/* Base static track line */
+.scroll-line-wrapper {
+    width: 2px;
+    height: 40px; /* Line ki length */
+    background: rgba(255, 255, 255, 0.06); /* Bohot halki background line */
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden; /* Flow ko boundary me rakhne ke liye */
+}
+
+/* Neon Current Flow Element */
+.scroll-current-flow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 16px; /* Current beam ki height */
+    /* Bright purple to transparent neon gradient tail */
+    background: linear-gradient(to bottom, #a855f7 0%, rgba(168, 85, 247, 0) 100%);
+    box-shadow: 0 0 8px rgba(168, 85, 247, 0.8); /* Glowing effect */
+    
+    /* Animation call: infinite smooth current flow */
+    animation: neonCurrentFlow 2s infinite cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Infinite Electric Flow Keyframes */
+@keyframes neonCurrentFlow {
+    0% {
+        transform: translateY(-100%);
+    }
+    70% {
+        transform: translateY(250%); /* Line ke bottom tak slide karega */
+    }
+    100% {
+        transform: translateY(250%); /* Ek chhota sa clean pause next loop se pehle */
+    }
+}
+
+        /* --- Right Glasmorphic Panel (Exact Match) --- */
+        /* --- Right Side Showcase Container --- */
+.showcase-right {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* 3D context preserve karne ke liye z-index handles */
+    z-index: 10;
+    margin-bottom: 60px;
+}
+
+/* 1. Base Ring (Jo Card Ke PEECHE Rahegi) */
+
+
+/* --- Ring Layering Engine (Exact Image Overlay Fix) --- */
+
+/* 1. Base Ring (Card ke peeche rehne ke liye) */
+
+/* --- Card Inner Screen Container --- */
+.card-display-screen {
+    background: #0d0a14; /* Deep premium black screen background */
+    border-radius: 16px;
+    width: 100%;
+    height: 240px;       /* Aapki requirement ke hisab se setup screen height */
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Padding ko 30px se kam karke 12px kar diya taaki logo ko bada hone ke liye space mile */
+    padding: 12px;       
+    overflow: hidden;
+    position: relative;
+}
+
+/* --- Scaled Up Project Logo Control --- */
+.card-project-logo {
+    /* Logo ka horizontal area 70% se badha kar 95% kiya */
+    width: 95%;          
+    max-width: 420px;    /* Ek max limit di taaki bohot badi screens par zyada pixelate na ho */
+    
+    /* Vertically control badha kar logo ke fine details ko visible karne ke liye */
+    height: auto;
+    max-height: 85%;    
+    
+    /* Logo ko stretch aur pichakne se bacha ke safe frame me bada karega */
+    object-fit: contain; 
+    
+    /* Logo ke gold lines ko dark background par pop karne ke liye subtle clean shadow */
+    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.6));
+    
+    /* Smooth loading visual */
+    transition: transform 0.3s ease;
+}
+
+/* Hover karne par logo halka sa scale up hoga professional feel ke liye (Optional) */
+.card-display-screen:hover .card-project-logo {
+    transform: scale(1.03);
+}
+.neon-back-ring {
+   position: absolute;
+    width: 120%;
+    height: 80%;
+    
+    /* Image 2 se exact color picker wala solid magenta-purple border */
+    border: 2px solid #b55fe6; 
+    border-radius: 50%;
+    transform: rotate(-22deg);
+    pointer-events: none;
+    z-index: 1;
+    
+    /* Image 2 jaisa brilliant neon flow aur ambient blur create karne ke liye shadow stacking */
+    box-shadow: 
+        0 0 10px rgba(181, 95, 230, 0.6),  /* Inner intense neon line burn */
+        0 0 25px rgba(139, 92, 246, 0.4),  /* Middle ambient spread */
+        0 0 50px rgba(168, 85, 247, 0.2);  /* Outer smooth lighting falloff */
+    margin-left: 10px;
+}
+
+/* 2. Front Cloned Ring (Jo card ke upar se top border bankar niklegi) */
+.neon-front-ring {
+    position: absolute;
+    width: 110%;
+    height: 70%;
+    border-radius: 50%;
+    transform: rotate(-22deg);
+    pointer-events: none;
+    
+    /* Sirf LEFT aur TOP borders ko heavy glowing custom style deni hai */
+    border: 1.5px solid transparent;
+    border-left: 2px solid rgba(168, 85, 247, 0.95);
+    border-top: 2px solid rgba(168, 85, 247, 0.95);
+    
+    /* Strong Cyberpunk Neon Neon Glow */
+    filter: drop-shadow(0 0 8px rgba(168, 85, 247, 0.9)) drop-shadow(0 0 25px rgba(139, 92, 246, 0.5));
+    
+    /* Card (z-index: 5) se upar rakhne ke liye master override */
+    z-index: 12;
+}
+
+        /* The Flat Glasmorphic Container Box */
+        
+        /* ==========================================================================
+   CRISP SHARP 3D CARD FIX (Anti-Blur Engine)
+   ========================================================================== */
+
+.exact-glass-card {
+    width: 100%;
+    max-width: 470px;
+    background: linear-gradient(135deg, rgba(20, 16, 35, 0.45) 0%, rgba(10, 7, 18, 0.75) 100%);
+    border: 1px solid rgba(139, 92, 246, 0.25);
+    border-radius: 24px;
+    padding: 32px 28px 28px 28px;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 5;
+    position: relative;
+    overflow: hidden;
+
+    /* Left Side Tilt Setup + translateZ(0) forcefully adds GPU acceleration */
+    transform: perspective(1500px) rotateY(-14deg) rotateX(6deg) rotateZ(-2deg) translateZ(0);
+    
+    /* Ultra Smooth Spring Transition Effect */
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+
+    /* --- THE ANTI-BLUR ENGINE --- */
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden; /* Fix for Safari */
+    transform-style: preserve-3d;
+    will-change: transform; /* Browser ko pehle se bol rha h ki smoothly layer handle kare */
+    -webkit-font-smoothing: antialiased; /* Text blur protection */
+}
+
+/* Hover State: Smoothly Resets back to 100% Flat/Straight */
+.exact-glass-card:hover {
+    /* Keeping translateZ(0) here to retain the GPU layer sharpness during animation */
+    transform: perspective(1500px) rotateY(0deg) rotateX(0deg) rotateZ(0deg) translateZ(0);
+    box-shadow: 0 40px 80px rgba(139, 92, 246, 0.15), 0 20px 40px rgba(0, 0, 0, 0.7);
+}
+        /* Flat Inner Mockup Terminal Screen */
+        .mockup-terminal {
+            width: 100%;
+            height: 240px;
+            background: #030106;
+            border-radius: 14px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            margin-bottom: 28px;
+            position: relative;
+            z-index: 1;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background-image: radial-gradient(circle at 80% 60%, rgba(99, 102, 241, 0.12) 0%, transparent 60%);
+        }
+
+        .mockup-title-text {
+            font-size: 1.55rem;
+            font-weight: 700;
+            max-width: 200px;
+            line-height: 1.25;
+            color: #ffffff;
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .mockup-accent-pill {
+            width: 60px;
+            height: 14px;
+            background: linear-gradient(90deg, #7c3aed 0%, #4f46e5 100%);
+            border-radius: 4px;
+        }
+
+        /* Footer Metadata Layout */
+        .featured-tag {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.15);
+            color: #a78bfa;
+            font-size: 0.72rem;
+            font-weight: 700;
+            padding: 5px 12px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .card-footer-layout {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-heading {
+            color: #ffffff;
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-sub {
+            color: #4b5563;
+            font-size: 0.88rem;
+            font-weight: 500;
+        }
+
+        .circle-action-arrow {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffffff;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .circle-action-arrow:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 60px;
+                text-align: center;
+            }
+            .content-left { align-items: center; }
+            .hero-desc { margin-left: auto; margin-right: auto; }
+            .scroll-explore { margin-top: 40px; }
+            .exact-glass-card { margin: 0 auto; }
+            .neon-back-ring { display: none; }
+        }
+
+        @media (max-width: 640px) {
+            .hero-title { font-size: 3.5rem; }
+        }
+
+ .projects-container {
+            --purple-main: #a855f7;
+            --purple-gradient: linear-gradient(135deg, #a855f7 0%, #6366f1 100%);
+            --text-gray: #94a3b8;
+            background-color: #07050e;
+            color: #ffffff;
+            padding: 60px 20px;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        
+        /* Filter Section */
+        .filter-section {
+            max-width: 1100px;
+            margin: 0 auto 80px auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .filter-section h2 {
+            font-size: 1.75rem;
+            font-weight: 700;
+        }
+        .filter-tabs {
+            display: flex;
+            gap: 10px;
+            background: rgba(255, 255, 255, 0.03);
+            padding: 6px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .tab {
+            padding: 8px 20px;
+            border-radius: 50px;
+            background: transparent;
+            border: none;
+            color: var(--text-gray);
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+        .tab.active {
+            background: var(--purple-main);
+            color: #fff;
+        }
+
+        /* Timeline & Layout Structure */
+        .projects-list {
+            max-width: 1100px;
+            margin: 0 auto;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 100px;
+        }
+        
+        /* The Timeline Vertical Line */
+        .projects-list::before {
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 20px;
+            bottom: 20px;
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, rgba(168, 85, 247, 0.3) 15%, rgba(168, 85, 247, 0.3) 85%, transparent);
+        }
+
+        .project-row {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            position: relative;
+            padding-left: 60px;
+        }
+        .project-row.reverse {
+            flex-direction: row-reverse;
+            padding-left: 60px;
+        }
+
+        /* Timeline Number Circle */
+        .p-number {
+            position: absolute;
+            left: 0;
+            top: calc(50% - 16px);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: #0d0a1b;
+            border: 1px solid var(--purple-main);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: var(--purple-main);
+            z-index: 5;
+            box-shadow: 0 0 15px rgba(168, 85, 247, 0.4);
+        }
+
+        /* Media Container (Glow Effect) */
+        .p-media {
+            width: 50%;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 24px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+        .p-media:hover {
+            border-color: rgba(168, 85, 247, 0.3);
+            box-shadow: 0 20px 40px rgba(168, 85, 247, 0.05);
+        }
+        .inner-screen {
+            background: #000;
+            border-radius: 14px;
+            height: 280px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .inner-screen img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Info Styling */
+        .p-info {
+            width: 50%;
+        }
+        .p-tag {
+            color: var(--purple-main);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+        }
+        .p-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            letter-spacing: -0.5px;
+        }
+        .p-subtitle {
+            color: var(--text-gray);
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        .p-desc {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+
+        /* Tech Badges */
+        .p-tech {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .p-tech span {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.8rem;
+            color: #e2e8f0;
+            font-weight: 500;
+        }
+
+        /* Action Buttons */
+        .p-actions {
+            display: flex;
+            gap: 12px;
+        }
+        .btn-action {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+        .btn-action.primary {
+            background: var(--purple-gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(168, 85, 247, 0.2);
+        }
+        .btn-action.primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(168, 85, 247, 0.4);
+        }
+        .btn-action.secondary {
+            background: rgba(255, 255, 255, 0.03);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .btn-action.secondary:hover {
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        /* Responsive Layout */
+        @media (max-width: 868px) {
+            .projects-list::before { left: 16px; }
+            .project-row, .project-row.reverse {
+                flex-direction: column;
+                gap: 30px;
+                padding-left: 50px;
+            }
+            .p-media, .p-info { width: 100%; }
+            .p-number { left: 0; top: 0; }
+        }
+
+        @media (min-width:320px) and ( max-width:798px){
+
+    html,
+    body{
+        width:100%;
+        overflow-x:hidden;
+    }
+
+    *{
+        box-sizing:border-box;
+    }
+
+    .nav{
+        width:100%;
+    }
+
+    .navbar{
+
+        position:fixed;
+
+        top:40px;
+
+        left:15px;
+
+        right:15px;
+
+        width:auto;
+
+        height:65px;
+
+        margin:0;
+
+        padding:0 18px;
+
+        z-index:9999;
+        
+
+    }
+
+    .resume-btn{
+        display:none;
+    }
+
+    .sidebar-social{
+        display:none;
+    }
+
+    .nav-toggle{
+        display:flex;
+    }
+
+    .nav-links{
+
+        position:absolute;
+
+        top:calc(100% + 12px);
+
+        left:0;
+
+        right:0;
+
+        margin:0;
+
+        display:flex;
+
+        flex-direction:column;
+
+        align-items:center;
+
+        gap:22px;
+
+        padding:30px;
+
+        background:#0b0b10;
+
+        border:2px solid rgba(168,85,247,.15);
+
+        border-radius:14px;
+
+        max-height:0;
+
+        overflow:hidden;
+
+        opacity:0;
+
+        pointer-events:none;
+
+        transition:.3s;
+
+    }
+
+    .nav-links.active{
+
+        max-height:420px;
+
+        opacity:1;
+
+        pointer-events:auto;
+
+    }
+}
+
+    /* --- Premium Responsive Background Banner --- */
+
+.banner-section {
+    width: 100%;
+    padding: 60px 6%;
+    display: flex;
+    justify-content: center;
+}
+
+.banner-responsive-bg {
+    width: 100%;
+    max-width: 1200px;
+    min-height: 400px; /* Desktop height */
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Content vertically center */
+    padding: 60px; /* Inside spacing for text */
+    
+    /* 1. DEFAULT DESKTOP IMAGE SETUP */
+    background-image: url('img/cta-4k.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Semi-transparent dark layer taaki background image chahe jaisi ho, text ekdum saaf dikhe */
+.banner-dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(10, 7, 18, 0.8) 0%, rgba(10, 7, 18, 0.3) 100%);
+    z-index: 1;
+}
+
+/* 2. AUTOMATIC MOBILE IMAGE SWITCH (768px ya usse choti screen par) */
+@media (max-width: 768px) {
+    .banner-responsive-bg {
+        background-image: url('img/mobile-banner.png');
+        
+        /* 1. FIXED: Image ko forced card ki exact width aur height par stretch-fit karega (No side gaps) */
+        background-size: 100% 100%; 
+        background-position: center center;
+        background-repeat: no-repeat;
+        
+        /* 2. HEIGHT CONFIG: Is aspect ratio ke liye height thodi kam (520px) rakho taaki planet niche hi rahe */
+        min-height: 880px; 
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start; 
+        
+        /* 3. PADDING BALANCING: Text ko border se thoda andar aur push karne ke liye custom margins handles */
+        padding: 50px 32px; 
+    }
+
+    .banner-content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+        text-align: center;
+
+    }
+
+    /* 4. BUTTON SEPARATION: Button aur text ke gap ko thoda tighten karo taaki button planet se upar safe zone me chala jaye */
+    .banner-subtitle {
+        margin-bottom: 16px; /* Subtitle aur button ka gap thoda kam kiya */
+    }
+
+    .banner-dark-overlay {
+        /* Bohot halka translucent layer taaki upar ka text aur niche ka planet dono vibrant chamkein */
+        background: linear-gradient(to bottom, rgba(10, 7, 18, 0.5) 0%, rgba(10, 7, 18, 0.1) 100%);
+    }
+}
+
+/* Content Styling (Z-Index is MUST to overlay on background) */
+.banner-content {
+   
+    position: relative;
+    z-index: 5;
+    width: 100%;
+    max-width: 850px; /* Isko 550px se badha kar 850px kar diya hai */
+
+}
+
+.banner-tag {
+    display: inline-block;
+    color: #a78bfa;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 12px;
+}
+
+/* --- Fine-Tuned Typography for the 2-Line Layout --- */
+
+.banner-title {
+    /* Desktop standard balance size */
+    font-size: 3.5rem; 
+    font-weight: 800;
+    
+    /* 1.1 ya 1.15 line-height se dono lines ke beech ka gap perfect grid me dikhega */
+    line-height: 1.15; 
+    color: #ffffff;
+    margin-bottom: 24px;
+    
+    /* Thoda compact and professional look ke liye slightly negative spacing */
+    letter-spacing: -1px; 
+}
+
+/* Amazing Neon Word */
+.banner-title .neon-highlight {
+    font-size: 3.5rem; /* Heading ke size se exact match */
+    color: #df9eff;
+    font-style: none;
+    font-weight: 900;
+    
+    /* Solid text shadow stacking jo abhi screen par chal rhi h */
+    text-shadow: 
+        0 0 10px rgba(181, 95, 230, 0.85),
+        0 0 25px rgba(168, 85, 247, 0.5),
+        0 0 50px rgba(139, 92, 246, 0.3);
+}
+
+/* ==========================================================================
+   DESKTOP FOOTER STRUCTURE FIX (Exact Alignment & Layout Balance)
+   ========================================================================== */
+
+#footer {
+    width: 100% !important;
+    background: #09090d !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 80px 8% 40px 8% !important; /* Top padding heavy, bottom safe */
+    display: block !important; /* Forces vertical flow between top container and bottom bar */
+}
+
+.footer-container {
+    max-width: 1400px !important;
+    margin: 0 auto 60px auto !important; /* Adds a clean gap before the copyright bar */
+    display: grid !important;
+    grid-template-columns: 2fr 1fr 1fr 1fr !important; /* Keeps brand column wide and links sharp */
+    gap: 70px !important;
+    align-items: flex-start !important; /* Aligns all headings (Quick Links, Services, Connect) on the exact same line */
+}
+
+/* ==========================================================================
+   FOOTER BOTTOM COPRYIGHT BAR (Full Width Spanning)
+   ========================================================================== */
+
+.footer-bottom {
+    max-width: 1400px !important;
+    margin: 0 auto !important;
+    padding-top: 35px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+    
+    display: flex !important;
+    flex-direction: row !important; /* Desktop par sideways flow */
+    justify-content: space-between !important; /* Left string left me, right string right me */
+    align-items: center !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+.footer-bottom p {
+    color: #7b7b7b !important;
+    font-size: 14px !important;
+    margin: 0 !important;
+    white-space: nowrap !important; /* Forces text to stay in a clean single line on desktop */
+    line-height: 1 !important;
+}
+
+/* ==========================================================================
+   TABLET & MOBILE FIX LAYER (Retaining previous clean updates)
+   ========================================================================== */
+@media (max-width: 1100px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 50px !important;
+    }
+    .footer-bottom {
+        white-space: normal !important;
+    }
+    .footer-bottom p {
+        white-space: normal !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+    }
+    .footer-bottom {
+        flex-direction: column !important;
+        text-align: center !important;
+        gap: 15px !important;
+    }
+}
+
+/* --- Responsive Media Query (For Tablets & Mobile) --- */
+@media (max-width: 992px) {
+    .banner-title, 
+    .banner-title .neon-highlight {
+        font-size: 2.8rem; /* Medium screens par width handle karne ke liye */
+    }
+}
+
+@media (max-width: 576px) {
+    .banner-title, 
+    .banner-title .neon-highlight {
+        font-size: 2rem; /* Exact mobile view padding configuration */
+        line-height: 1.25;
+        letter-spacing: -0.5px;
+    }
+}
+.banner-subtitle {
+    color: #94a3b8;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 28px;
+}
+
+.banner-btn {
+    display: inline-block;
+    
+    /* Image 2 jaisa exact sharp gradient background (Purple se Electric Blue blend) */
+    background: linear-gradient(135deg, #a855f7 0%, #6366f1 50%, #3b82f6 100%);
+    
+    /* Text color ekdum crisp white */
+    color: #ffffff; 
+    text-decoration: none;
+    
+    /* Image 2 jaisa smooth modern curved border shape (Na ki poora gol pill) */
+    padding: 14px 32px;
+    border-radius: 14px; 
+    
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2); /* Soft purple neon footprint underneath */
+}
+
+/* Hover dynamic effect */
+.banner-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(139, 92, 246, 0.4); /* Hover karne par glow badhega */
+    filter: brightness(1.1); /* Slightly lights up the gradient on hover */
+}
+
+/* Responsive Font Sizes for Smaller Screens */
+@media (max-width: 576px) {
+    .banner-title { font-size: 2rem; }
+    .banner-subtitle { font-size: 0.9rem; }
+}
+
+#footer{
+
+    width:100%;
+
+    background:#09090d;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding:80px 8% 30px;
+}
+
+.footer-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:70px;
+}
+
+
+/*=========================
+        BRAND
+==========================*/
+
+.brand{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.brand img{
+
+    width:42px;
+}
+
+.brand h2{
+
+    color:#fff;
+
+    font-size:40px;
+}
+
+.footer-brand p{
+
+    color:#9b9b9b;
+
+    line-height:1.9;
+
+    max-width:360px;
+
+    margin-bottom:25px;
+}
+
+
+/*=========================
+     AVAILABLE STATUS
+==========================*/
+
+.footer-status{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#d8d8d8;
+
+    font-size:15px;
+}
+
+.status-dot{
+
+    width:10px;
+
+    height:10px;
+
+    border-radius:50%;
+
+    background:#00ff7f;
+
+    box-shadow:0 0 12px #00ff7f;
+}
+
+
+/*=========================
+      HEADINGS
+==========================*/
+
+.footer-links h3,
+.footer-services h3,
+.footer-connect h3{
+
+    color:#fff;
+
+    margin-bottom:25px;
+}
+
+.footer-links ul,
+.footer-services ul{
+
+    list-style:none;
+}
+
+.footer-links li,
+.footer-services li{
+
+    margin-bottom:16px;
+}
+
+.footer-links a{
+
+    text-decoration:none;
+
+    color:#9b9b9b;
+
+    transition:.3s;
+}
+
+.footer-links a:hover{
+
+    color:#A855F7;
+}
+
+.footer-services li{
+
+    color:#9b9b9b;
+}
+
+
+/*=========================
+      SOCIAL
+==========================*/
+
+.social-links{
+
+    display:flex;
+
+    gap:15px;
+
+    margin-bottom:25px;
+}
+
+.social-links a{
+
+    width:48px;
+
+    height:48px;
+
+    border-radius:14px;
+
+    background:#171722;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    transition:.3s;
+}
+
+.social-links a:hover{
+
+    background:#A855F7;
+
+    transform:translateY(-5px);
+}
+
+.footer-mail{
+
+    color:#9b9b9b;
+
+    text-decoration:none;
+}
+
+
+/*=========================
+      BOTTOM
+==========================*/
+
+.footer-bottom{
+
+    margin-top:70px;
+
+    padding-top:30px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.footer-bottom p{
+
+    color:#7b7b7b;
+
+    font-size:15px;
+}
+
+
+/*=========================
+      RESPONSIVE
+==========================*/
+
+@media(max-width:1100px){
+
+.footer-container{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:700px){
+
+.footer-container{
+
+grid-template-columns:1fr;
+
+}
+
+.footer-bottom{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.brand h2{
+
+font-size:32px;
+
+}
+
+}
+
+.nav-toggle {
+    display: none;
+    width: 64px;
+    height: 44px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: color .3s, transform .3s;
+    margin-right: -15px;
+}
+
+.nav-toggle:hover {
+    color: #A855F7;
+}
+
+
+
+@media (max-width: 1024px) {
+
+    .navbar{
+        margin-right: 5px;   
+        margin-left: 6.5px;
+     }
+
+    .nav-right .resume-btn {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: calc(100% + 12px);
+        left: 0;
+        right: 0;
+
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+
+        margin: 0 20px;
+        padding: 36px 20px;
+
+        background: rgba(10,10,15,0.97);
+        border: 2px solid rgba(168,85,247,0.15);
+        border-radius: 14px;
+        backdrop-filter: blur(20px);
+
+        max-height: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        transform: translateY(-8px);
+
+        transition: max-height 280ms ease, opacity 250ms ease, transform 280ms ease;
+    }
+
+    .nav-links.active {
+        max-height: 420px;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        text-align: center;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+    }
+}
+
+
+/* ==========================================================================
+   DESKTOP STYLE (Tumhara default code agar pehle se likha hai toh verify kar lo)
+   ========================================================================== */
+.filter-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px !important;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.filter-section h2 {
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.filter-tabs {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    background: #13101c; /* Dark background bar */
+    padding: 10px 16px;
+    border-radius: 50px;
+    width: max-content; /* Desktop par utni hi width lega jitne tabs hain */
+}
+
+.filter-tabs .tab {
+    background: transparent;
+    color: #94a3b8;
+    border: none;
+    padding: 10px 24px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.filter-tabs .tab.active {
+    background: #a855f7; /* Violet active state */
+    color: #ffffff;
+}
+
+
+
+
+/* ==========================================================================
+   MOBILE OPTIMIZATION (768px ya usse choti screen ke liye)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .filter-section h2 {
+        font-size: 1.6rem; /* Mobile par heading size thoda adjust */
+        margin-bottom: 5px;
+    }
+
+    .filter-tabs {
+        width: 100%; /* Mobile screen par poori width cover karega */
+        border-radius: 16px; /* Phone par thoda rectangular rounded corner zyada dynamic lagta h */
+        padding: 12px 14px;
+        gap: 10px;
+
+        /* --- SWIPE ENGINE ACTIVATION --- */
+        display: flex;
+        flex-wrap: nowrap;          /* Tabs ko force karega ki wo ek hi line me rhen */
+        justify-content: flex-start;
+        overflow-x: auto;           /* Left to Right swipe active karega */
+        -webkit-overflow-scrolling: touch; /* iOS/Android par smooth momentum scroll */
+    }
+
+    /* --- CLEAN INTERFACE: Hide Ugly Scrollbars --- */
+    .filter-tabs::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+    .filter-tabs {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    }
+
+    /* --- TAB PROTECTION --- */
+    .filter-tabs .tab {
+        white-space: nowrap; /* "Web Development" ya "Tools & Apps" ka text do lines me break nahi hoga */
+        flex-shrink: 0;      /* Browser ko button pichakne (squeeze) nahi dega */
+        padding: 8px 18px;   /* Finger touch target ke liye perfect sizing */
+        font-size: 0.9rem;
+    }
+}
+
+/* ==========================================================================
+   BULLETPROOF HERO LOAD ANIMATION (Direct Class Targets)
+   ========================================================================== */
+
+/* 1. Base State Configuration: Shuru me sabko hide aur thoda niche position karo */
+.work-badge, 
+.hero-title, 
+.hero-desc, 
+.action-capsule-btn {
+    opacity: 0;
+    transform: translateY(25px);
+    will-change: transform, opacity;
+}
+
+/* 2. Master Entry Animation: Fade up hone ke sath smooth glow/blur effect */
+@keyframes premiumCyberEntry {
+    0% {
+        opacity: 0;
+        transform: translateY(25px);
+        filter: blur(8px) brightness(1.5); /* Shuru me halke se neon flash ki tarah load hoga */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0) brightness(1);
+    }
+}
+
+/* ==========================================================================
+   STAGGERED TIMELINE (Domino Effect Setup)
+   ========================================================================== */
+
+/* ==========================================================================
+   PREMIUM SLOW-MOTION HERO ANIMATION (Left Content Only)
+   ========================================================================= */
+
+/* Shuru me elements ko ready karo (Starting state thodi heavy aur drop rakhi h) */
+/* ==========================================================================
+   FINAL PERFECT COMBINATION: LOAD INTRO + SCROLLYTELLING
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   STAGE 1: HERO SECTION - PURE ENTRY ANIMATION (Jab page khulega tab chalega)
+   -------------------------------------------------------------------------- */
+.hero-section .content-left .work-badge, 
+.hero-section .content-left .hero-title, 
+.hero-section .content-left .hero-desc, 
+.hero-section .content-left .action-capsule-btn,
+.hero-section .content-left .scroll-explore {
+    opacity: 0;
+    transform: translateY(35px);
+    will-change: transform, opacity, filter;
+    
+    /* Strict page load entry animation */
+    animation: premiumInitialLoad 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Staggered load delays sirf hero section ke liye */
+.hero-section .content-left .work-badge { animation-delay: 0.15s; }
+.hero-section .content-left .hero-title { animation-delay: 0.35s; }
+.hero-section .content-left .hero-desc  { animation-delay: 0.55s; }
+.hero-section .content-left .action-capsule-btn { animation-delay: 0.7s; }
+.hero-section .content-left .scroll-explore { animation-delay: 0.85s; }
+
+/* Pure Page Load Keyframe */
+@keyframes premiumInitialLoad {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(10px) brightness(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0) brightness(1);
+    }
+}
+
+
+/* --------------------------------------------------------------------------
+   STAGE 2: NEXT SECTIONS - PURE SCROLLYTELLING (Jab user scroll karega tab)
+   -------------------------------------------------------------------------- */
+/* --------------------------------------------------------------------------
+   STAGE 2: NEXT SECTIONS - PURE SCROLLYTELLING (Stuck Blur Fixed)
+   -------------------------------------------------------------------------- */
+@supports (animation-timeline: view()) {
+    
+    .projects-container .project-row,
+    .banner-section .banner-content {
+        opacity: 0;
+        transform: translateY(40px);
+        will-change: transform, opacity;
+        
+        animation: rollsRoyceScrollReveal linear both;
+        animation-timeline: view();
+        
+        /* FIX: Range ko 'entry 5% entry 25%' kiya taaki element screen par 
+           aate hi turant 100% complete ho jaye, page end me fassa na rahe */
+        animation-range: entry 5% entry 25%;
+    }
+}
+
+/* Scrollytelling Custom Keyframe (Removed Blur to prevent pixelation) */
+@keyframes rollsRoyceScrollReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.98);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* ==========================================================================
+   STRICT ANTI-SKIP SNAP MATRIX (EXACT HTML MATCH)
+   ========================================================================== */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+    background-color: #05020a; /* Aapka theme base background */
+}
+
+/* Base structural wrapper logic */
+.nav {
+    height: 100%;
+}
+
+/* STRICT LOCK FOR ALL 4 MAJOR BLOCKS */
+/* Hero Section, Projects Grid, Banner Section, and Footer */
+.hero-section, 
+.projects-container, 
+.banner-section,
+#footer {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    max-height: 100vh !important;
+    
+    scroll-snap-align: start !important;
+    scroll-snap-stop: always !important; /* Browser yahan mandatory break marega */
+    
+    position: relative;
+    overflow: hidden; /* Content overflows won't break snap calculations */
+    box-sizing: border-box;
+}
+
+/* Layout centering guards */
+.hero-section, .banner-section, #footer {
+    display: flex;
+    align-items: center;
+}
+
+/* ==========================================================================
+   NAVBAR GUARD & PADDING FIXES
+   ========================================================================== */
+
+/* Fixed header setting to prevent content collision */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99999;
+}
+
+/* Navbar space allocation */
+.hero-section {
+    padding-top: 90px; /* Isse title content navbar ke piche nahi chupega */
+}
+
+/* Projects inner alignment to ensure no text cutoff inside 100vh */
+.projects-container {
+    padding: 100px 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; /* Internal scrolling if items are too tall on tiny mobile monitors */
+}
+
+/* ==========================================================================
+   LEFT SIDE ULTRA-PREMIUM SLOW ANIMATION (Section-Triggered)
+   ========================================================================== */
+@supports (animation-timeline: view()) {
+    
+    .content-left .work-badge, 
+    .content-left .hero-title, 
+    .content-left .hero-desc, 
+    .content-left .action-capsule-btn,
+    .content-left .scroll-explore {
+        opacity: 0;
+        transform: translateY(35px);
+        will-change: transform, opacity, filter;
+        
+        animation: premiumSlowReveal 1.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+        animation-timeline: view();
+        animation-range: entry 15% entry 85%;
+    }
+    
+    /* Cinematic Domino Delay */
+    .content-left .work-badge { animation-delay: 0.1s; }
+    .content-left .hero-title { animation-delay: 0.3s; }
+    .content-left .hero-desc  { animation-delay: 0.5s; }
+    .content-left .action-capsule-btn { animation-delay: 0.65s; }
+    .content-left .scroll-explore { animation-delay: 0.8s; }
+}
+
+/* Soft Cinematic Blur & Move Up Keyframe */
+@keyframes premiumSlowReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(35px);
+        filter: blur(10px) brightness(1.2);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0) brightness(1);
+    }
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE FIX (Anti-Cutoff & Space Expansion)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+    /* 1. Mobile par strict 100vh choke hatao taaki card na kate */
+    .hero-section, 
+    .hero-section .nav, /* structural parent guard if needed */
+    .nav {
+        height: auto !important;
+        min-height: 100vh !important;
+        max-height: none !important;
+        overflow: visible !important; /* Kate hue elements ko wapis dikhayega */
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 50px !important; /* Top navbar spacing security */
+        padding-bottom: 80px !important;  /* Bottom par extra breathing room */
+    }
+
+    /* 2. Hero container ka space release karo */
+    .hero-container {
+        display: flex;
+        flex-direction: column; /* Content stack vertically */
+        gap: 50px; /* Text aur card ke beech premium gap */
+        transform: none !important; /* Overlap fix karne ke liye translation clear */
+        height: auto !important;
+        margin-top: 10px;
+    }
+
+    /* 3. Showcase panel aur glass card controls */
+    .showcase-right {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .exact-glass-card {
+        width: 100%;
+        max-width: 400px; /* Card mobile screen me wide aur centered rahega */
+        margin: 0 auto;
+    }
+    
+    /* 4. Scroll explore instruction hidden on mobile since it feels redundant */
+    .hero-section .scroll-explore {
+        display: none !important;
+    }
+
+    .projects-container{
+        margin-top: 30px;
+    }
+  
+    
+
+}
+
+
+/* ==========================================================================
+   THE ULTIMATE MOBILE BREAKOUT GRID (Everything Internal Safe)
+   ========================================================================== */
+
+@media screen and (max-width: 768px) {
+    /* 1. Pure page se scroll snap aur strict heights ka choke hatao */
+    html, body {
+        height: auto !important;
+        scroll-snap-type: none !important; /* Mobile scroll lock completely relaxed */
+        overflow-y: auto !important;
+    }
+
+    /* 2. Saare sections ko azad karo taaki mobile par text natural bada ho sake */
+    .hero-section, 
+    .projects-container, 
+    .banner-section, 
+    #footer {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        scroll-snap-align: none !important;
+        overflow: visible !important;
+    }
+
+    /* 3. Footer container layout vertical alignment */
+    #footer {
+        padding: 50px 20px 30px 20px !important;
+        background: #09090d !important;
+        display: block !important;
+    }
+
+    .footer-container {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 40px !important;
+        grid-template-columns: none !important; /* Destroys desktop grid */
+    }
+
+    /* 4. CRITICAL FIX: Footer bottom block padding and border control */
+    .footer-bottom {
+        margin-top: 40px !important;
+        padding: 24px 10px 10px 10px !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+        
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+        align-items: center !important; /* Centered layout for mobile premium look */
+        text-align: center !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* 5. TEXT WRAPPING ENGINE: Forcing texts to strictly live within screen boundaries */
+    .footer-bottom p {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        font-size: 13px !important;
+        line-height: 1.6 !important;
+        
+        white-space: normal !important;   /* Line breaking strictly allowed */
+        word-wrap: break-word !important;  /* Safety wrap breaker */
+        overflow-wrap: break-word !important;
+    }
+
+    
+}
+
+
+/* ==========================================================================
+   THE INDEPENDENT DUAL-DEVICE FIXED STRUCTURE
+   ========================================================================== */
+
+/* 1. STRICT DESKTOP RULES RULES ONLY (Screen size above 768px) */
+@media screen and (min-width: 769px) {
+    #footer {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        padding: 80px 8% 24px 8% !important; 
+        scroll-snap-align: end !important; /* Exact desktop snapping edge lock */
+    }
+
+    .footer-bottom {
+        margin-top: 50px !important;
+        padding-top: 24px !important;
+        padding-bottom: 0 !important;
+    }
+}
+
+/* 2. STRICT MOBILE RULES ONLY (Screen size 768px and below) */
+@media screen and (max-width: 768px) {
+    html, body {
+        height: auto !important;
+        min-height: 100vh !important;
+        scroll-snap-type: none !important; /* Completely kill mobile snap gaps */
+        overflow-y: auto !important;
+        background-color: #09090d !important; /* Forces document color to melt into the footer */
+    }
+
+    .nav {
+        height: auto !important;
+        min-height: 100vh !important;
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    #footer {
+        margin-top: auto !important; /* Pushes footer to absolute viewport bottom if content is short */
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
+        scroll-snap-align: none !important;
+        padding: 50px 20px 15px 20px !important; /* Tight clean mobile spacing */
+        background: #09090d !important;
+    }
+
+    .footer-bottom {
+        margin-top: 30px !important;
+        padding: 20px 0 0 0 !important; /* Cleans up internal bottom gaps inside the footer element */
+        width: 100% !important;
+    }
+
+    .footer-bottom p {
+        margin-bottom: 8px !important; /* Tight wrap spacing for safety text lines */
+    }
+}

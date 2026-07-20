@@ -1,0 +1,482 @@
+/* ===========================
+   NAVBAR LOAD ANIMATION
+=========================== */
+
+@keyframes navDrop {
+    0%{
+        opacity:0;
+        transform:translateY(-40px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.navbar{
+    opacity:0;
+    animation:navDrop .8s ease forwards;
+}
+
+@keyframes logoFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateX(-30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateX(0);
+
+    }
+
+}
+
+.logo{
+
+    opacity:0;
+
+    animation:logoFade .7s ease forwards;
+
+    animation-delay:.3s;
+
+}
+
+@keyframes navLink{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(-15px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.nav-links li{
+
+    opacity:0;
+
+    animation:navLink .5s ease forwards;
+
+}
+
+.nav-links li:nth-child(1){
+    animation-delay:.5s;
+}
+
+.nav-links li:nth-child(2){
+    animation-delay:.6s;
+}
+
+.nav-links li:nth-child(3){
+    animation-delay:.7s;
+}
+
+.nav-links li:nth-child(4){
+    animation-delay:.8s;
+}
+
+.nav-links li:nth-child(5){
+    animation-delay:.9s;
+}
+
+@keyframes moonRotate{
+
+    from{
+
+        opacity:0;
+
+        transform:rotate(-180deg);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:rotate(0);
+
+    }
+
+}
+
+.theme-btn{
+
+    opacity:0;
+
+    animation:moonRotate .8s ease forwards;
+
+    animation-delay:1s;
+
+}
+
+@keyframes buttonPop{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+.resume-btn{
+
+    opacity:0;
+
+    animation:buttonPop .6s ease forwards;
+
+    animation-delay:1.15s;
+
+}
+
+@keyframes borderGlow{
+
+    0%{
+
+        box-shadow:0 0 0 rgba(168,85,247,0);
+
+    }
+
+    50%{
+
+        box-shadow:0 0 25px rgba(168,85,247,.25);
+
+    }
+
+    100%{
+
+        box-shadow:0 0 10px rgba(168,85,247,.08);
+
+    }
+
+}
+
+.navbar{
+
+    animation:
+        navDrop .8s ease forwards,
+        borderGlow 1.8s ease forwards;
+
+}
+
+@keyframes floatRing{
+    0%, 100% {transform: translateY(0)};
+    50%{transform: translateY(-12px)};
+}
+
+@keyframes waveMove{
+
+    0%{
+
+        transform: translateX(0);
+
+    }
+
+    100%{
+
+        transform: translateX(-50%);
+
+    }
+
+}
+
+/*=====================================
+        HERO INTRO ANIMATION
+======================================*/
+
+/* Initial State */
+
+.subtitle,
+.greeting,
+.main-name,
+.description,
+.cta-buttons{
+
+    opacity:0;
+
+    transform:translateY(35px);
+
+}
+
+/*=====================================
+            KEYFRAMES
+======================================*/
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(35px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/*=====================================
+        TEXT ANIMATIONS
+======================================*/
+
+.subtitle{
+
+    animation:fadeUp .7s ease .2s forwards;
+
+}
+
+.greeting{
+
+    animation:fadeUp .7s ease .45s forwards;
+
+}
+
+.main-name{
+
+    animation:fadeUp .8s ease .7s forwards;
+
+}
+
+.description{
+
+    animation:fadeUp .8s ease .95s forwards;
+
+}
+
+.cta-buttons{
+
+    animation:fadeUp .8s ease 1.2s forwards;
+
+}
+
+
+/*=====================================
+        HERO IMAGE
+======================================*/
+
+.hero-image-wrapper{
+
+    opacity:0;
+
+    animation:imageFade 1s ease 1s forwards;
+
+}
+
+@keyframes imageFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=====================================
+            WAVE
+======================================*/
+
+#wave-container{
+
+    opacity:0;
+
+    animation:waveFade 1s ease 1.4s forwards;
+
+}
+
+@keyframes waveFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=====================================
+            STATS
+======================================*/
+
+.stats-grid{
+
+    opacity:0;
+
+    animation:statsFade .8s ease 1.7s forwards;
+
+}
+
+@keyframes statsFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=====================================
+        SCROLL INDICATOR
+======================================*/
+
+.scroll-down{
+
+    opacity:0;
+
+    animation:scrollFade .8s ease 2s forwards;
+
+}
+
+@keyframes scrollFade{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=====================================
+        MOUSE WHEEL
+======================================*/
+
+.wheel{
+
+    animation:wheelMove 1.6s infinite;
+
+}
+
+@keyframes wheelMove{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:translateY(7px);
+
+        opacity:.35;
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
+/*=====================================
+        ARROW
+======================================*/
+
+.arrow-animated{
+
+    animation:arrowMove 1.6s infinite;
+
+}
+
+@keyframes arrowMove{
+
+    0%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+    50%{
+
+        transform:translateY(7px);
+
+        opacity:.35;
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+        opacity:1;
+
+    }
+
+}
+
+
