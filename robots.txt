@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shashank-singh-portfolio-2007.netlify.app/sitemap.xml
